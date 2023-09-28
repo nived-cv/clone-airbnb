@@ -89,20 +89,28 @@
         <div id="tab-view">
 
             <div class="sub-nav1">
+                
                 <div class="left-items-tablet">
-             
                     <div class="logo1">
                         <picture>
                             <source srcset="svg/svgexport-1.svg" media="(min-width: 1440px)">
                             <img src="svg/svgexport-2.svg">
                         </picture>
                     </div>
-                 
+                        
                     <div class="search">
                         <div id="search-box-text" >
-                            <div id="anywhere">Anywhere</div>
-                            <div id="anyweek">Any week</div>
-                            <div id="guests">Add guests</div>
+                            <div id="container-anywhere">
+                                <div id="anywhere">Anywhere</div>
+                            </div>
+                            <div id="container-anyweek">
+                                <div id="anyweek">Any week</div>
+                            </div>
+                            <div id="container-guests">
+                                <div id="guests">Add guests</div>
+                            </div>
+                            
+                            
                         </div>
                         <div id="search-icon">
                             <div id="search-round">
@@ -112,16 +120,16 @@
                     </div>
                 </div>
 
-                <div class="profile">
-                    <span>Airbnb your home</span>
-                    <img id="globe" src="svg/svgexport-5.svg">
-                    <div id="profile-option">
-                        <img id="menu-icon-1" src="svg/svgexport-6.svg">
-                        <img id="menu-icon-2" src="svg/svgexport-7.svg">
+                    <div class="profile">
+                        <span>Airbnb your home</span>
+                        <img id="globe" src="svg/svgexport-5.svg">
+                        <div id="profile-option">
+                            <img id="menu-icon-1" src="svg/svgexport-6.svg">
+                            <img id="menu-icon-2" src="svg/svgexport-7.svg">
+                        </div>
                     </div>
-                </div>
 
-
+                
             </div>
         </div>
         
@@ -1004,17 +1012,19 @@
     <div class="footer-container-1">
     <h2>Inspiration for future getaways</h2>
     
-        <ul id="scroll-2">
-            <li>Popular</li>
-            <li>Arts & Culture</li>
-            <li>Outdoors</li>
-            <li>Mountains</li>
-            <li>Beach</li>
-            <li>>Unique stays</li>
-            <li>Categories</li>
-            <li>Things to do</li>
-            <li ><img id="arrow-footer-div" src="arrow-footer.svg"></li>
-        </ul>
+        <div id="scroll-2-container">
+            <ul id="scroll-2">
+                <li>Popular</li>
+                <li>Arts & culture</li>
+                <li>Outdoors</li>
+                <li>Mountains</li>
+                <li>Beach</li>
+                <li>Unique stays</li>
+                <li>Categories</li>
+                <li>Things to do</li>
+                <li ><img id="arrow-footer-div" src="arrow-footer.svg"></li>
+            </ul>
+        </div>
     
     </div>
     <div id="footer-grid">
@@ -1049,43 +1059,7 @@
                 <p class="sub-text">House rentals</p>
             </a></li>
             <li><a href="#">
-                <p class="main-text">Jasper</p>
-                <p class="sub-text">Cabin rentals</p>
-            <li><a href="#">
-                <p class="main-text">Mountain view</p>
-                <p class="sub-text">Cabin rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Devonport</p>
-                <p class="sub-text">Cottage rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Mallacoota</p>
-                <p class="sub-text">Holiday rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Ibiza</p>
-                <p class="sub-text">Holiday rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Anaheim</p>
-                <p class="sub-text">Apartment rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Monterey</p>
-                <p class="sub-text">Apartment rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Paso Robles</p>
-                <p class="sub-text">Holiday rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Santa Barbara</p>
-                <p class="sub-text">Pet-friendly rentals</p>
-            </a></li>
-            <li><a href="#">
-                <p class="main-text">Sonoma</p>
-                <p class="sub-text">Cabin rentals</p>
+                <p class="main-text">Show more <img src="down.svg"></p>
             </a></li>
         </ul>
     </div>
@@ -1134,6 +1108,9 @@
                 <p class="main-text">Mallacoota</p>
                 <p class="sub-text">Holiday rentals</p>
             </a></li>   
+            <li><a href="#">
+                <p class="main-text">Show more <img src="down.svg"></p>
+            </a></li>
         </ul>
     </div>
     <div class="foot-1-xl">
@@ -1249,8 +1226,8 @@
         <div id="configs-social">
             <div class="configs">
                 <img src="svg/svgexport-5.svg">
-                <span>English(IN)</span>
-                <span><a href="#">₹   INR</a></span>
+                <span>English (IN)</span>
+                <span>₹</span><span>INR</span>
             </div>
             <div id="social">
                 <img src="fb.svg">
@@ -1262,7 +1239,7 @@
             © 2023 Airbnb, Inc.
         </div>
         <div class="terms">
-                Privacy · Terms · Sitemap · Company details
+                <span>Privacy </span><span class="dot-spacer">·</span> <span>Terms </span><span class="dot-spacer">·</span> <span>Sitemap </span><span class="dot-spacer">·</span> <span>Company details </span>
         </div>
     </div>
         
@@ -1271,10 +1248,7 @@
     <div class="foot-3-1440p">
         <div class="copyright">
             <span>© 2023 Airbnb, Inc.</span>
-            <span><a href="#"> <span>·</span><span>Privacy</span></a></span>
-            <span><a href="#"><span>·</span><span>Terms</a></span></span>
-            <span><a href="#"><span>·</span><span>Sitemap</a></span></span>
-            <span><a href="#"><span>·</span><span>Company details</a></span></span>
+            <span class="dot-spacer">·</span><span>Privacy </span><span class="dot-spacer">·</span> <span>Terms </span><span class="dot-spacer">·</span> <span>Sitemap </span><span class="dot-spacer">·</span> <span>Company details </span>
         </div>
 
         <div class="configs">
