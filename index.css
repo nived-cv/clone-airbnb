@@ -184,8 +184,7 @@ header {
 .scroll img {
     height: 24px;
     width: 24px;
-    color: #717171;
-
+    opacity: 50%;
 }
 
 .items {
@@ -203,7 +202,11 @@ header {
 .items:nth-child(1) {
     font-weight: 400;
     border-bottom: 2px solid #222222;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    
+}
+.items:nth-child(1) img{
+    opacity: 100%;
 }
 
 .items span {
@@ -1139,9 +1142,9 @@ main {
         display: none;
 
     }
-    #cover-arrow{
+    /* #cover-arrow{
         display:none;
-    }
+    } */
     .foot-1-large{
         display: block;
     }
@@ -1149,6 +1152,8 @@ main {
     .left-items-tablet{
         display: flex;
         justify-content: space-between;
+        flex-grow: 1;
+        margin-right: 5px;
 
     }
     
@@ -1157,13 +1162,49 @@ main {
     }
 
     .search {
-        margin-left: 270px;
+        flex-grow: 0;
+        width:352px;
     }
-
+    #search-box-text{
+        display:flex;
+        align-items: flex-start;
+    }
+    
+    .line-spacer{
+        width:1px;
+        height:24px;
+        background-color: #dddddd;
+    }
+    
+    #search-box-text{
+        align-items: center;
+    }
+    #anyweek,#anywhere,#guests{
+        margin:0;
+        padding:0;  
+    }
+    #container-anyweek,#container-anywhere,#container-guests{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    #container-anywhere{
+        margin-right: -2px;
+    }
+    #container-anyweek{
+        margin-left: 13px;
+        margin-right:-9px;
+    }
+    #container-guests{
+        margin-left:16px;
+        margin-right: 0px;  
+    }
+    
     #anyweek,
     #anywhere {
         color: #222222;
-        font-family: fbold;
+        font-family: fmed;
+        font-weight: 400;
     }
 
     /* hello */
@@ -1267,7 +1308,14 @@ main {
         width:12px;
         height:12px;
     }
+    .foot-1-large p{
+        white-space-collapse: preserve;
+    }
 
+    .foot-1-large .main-text{
+        display: flex;
+        align-items: center;
+    }
 
     .foot-1-large ul {
         grid-template-columns: repeat(3, 1fr);
@@ -1308,24 +1356,11 @@ main {
         justify-content: space-between;
         padding: 0 80px;
     }
-
-    .search {
-        margin-left: 360px;
-        height: 48px;
-        padding-right:10px;
+    .left-items-tablet{
+        max-width: calc(50% + 176px);
     }
-
-    #anywhere,
-    #anyweek,
-    #guests {
-
-        padding-right: 16px;
-        padding-left: 16px;
-    }
-
-    #search-box-text {
-        padding: 0;
-        margin: 0;
+    #search-box-text{
+        align-items: center;
     }
 
     .sub-nav2 {
@@ -1394,7 +1429,11 @@ main {
     .home {
         grid-column: span 1;
     }
-
+    #continue {
+        margin-bottom: 48px;
+        padding: 0px;
+    }
+    
 
     footer {
         padding: 0;
