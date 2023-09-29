@@ -62,11 +62,11 @@ footer {
 #social,
 .breaker-1440,
 .foot-1-large,
-.foot-1-xl {
+.foot-1-xl,.search-big {
     display: none;
 }
 
-#phone-view {
+#mobile-view {
     display: block;
 }
 
@@ -723,7 +723,7 @@ main {
 
 @media screen and (min-width:768px) {
 
-    #phone-view,
+    #mobile-view,
     .foot-3-1440p,
     .settings,
     .search-min,
@@ -1142,6 +1142,10 @@ main {
         display: none;
 
     }
+    .search{
+        display: none;
+    }
+   
     /* #cover-arrow{
         display:none;
     } */
@@ -1154,6 +1158,7 @@ main {
         justify-content: space-between;
         flex-grow: 1;
         margin-right: 5px;
+        max-width: calc(50% + 176px);
 
     }
     
@@ -1161,20 +1166,60 @@ main {
         justify-content: space-between;
     }
 
-    .search {
+    .search-big{
+        display: flex;
+        align-items: center;
+        border: 1px solid #dddddd;
+        border-radius: 60px;
+        height:48px;
+        width:352px;
+        box-sizing: border-box;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
+
+    }
+    #sec-1,#sec-2,#sec-3{
+        font-family: fbook;
+        font-size: .875rem;
+        line-height:22px;
+        padding-right: 17px;
+        padding-left: 20px;
+        border-right:.5px solid #dddddd;
+        white-space: nowrap;
+    }
+    #sec-1{
+        padding-left:24px;
+        padding-right:16px;
+        font-family: fmed;
+        font-weight:100;
+    }
+    #sec-2{
+        padding-left:16px;
+        font-family: fmed;
+        font-weight:100;
+    }
+    #sec-3{
+        border-right:none;
+        padding-left: 15px;
+        padding-right: 16px;
+        color:#717171;
+    }
+
+    /* .search {
         flex-grow: 0;
         width:352px;
     }
     #search-box-text{
         display:flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: flex-start;
     }
-    
+   
     .line-spacer{
         width:1px;
         height:24px;
         background-color: #dddddd;
     }
+
     
     #search-box-text{
         align-items: center;
@@ -1205,7 +1250,7 @@ main {
         color: #222222;
         font-family: fmed;
         font-weight: 400;
-    }
+    } */
 
     /* hello */
     .filters {
@@ -1356,9 +1401,9 @@ main {
         justify-content: space-between;
         padding: 0 80px;
     }
-    .left-items-tablet{
+    /* .left-items-tablet{
         max-width: calc(50% + 176px);
-    }
+    } */
     #search-box-text{
         align-items: center;
     }
