@@ -189,6 +189,8 @@ header {
 
 .items {
     padding: 12px 4px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin: 0px 0px;
     margin-top: 5px;
     text-align: center;
@@ -197,6 +199,10 @@ header {
     font-weight: 100;
     box-sizing: border-box;
     color: #717171;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
 }
 
 .items:nth-child(1) {
@@ -224,50 +230,8 @@ main {
 
 }
 
-#taxes {
-    grid-column: span 8;
-    border-radius: 12px;
-    border: 1px solid #dddddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    /*24px*/
-    margin-bottom: -16px;
-    padding: 0 16px;
-    height: 64px;
-    font-size: 15px;
-    line-height: 19px;
-    box-sizing: border-box;
-    color:rgb(34, 34, 34);
-}
 
-#taxes #button {
-    width: 48px;
-    height: 32px;
-    background-color: #b0b0b0;
-    cursor: pointer;
-    border: 1px solid #b0b0b0;
-    border-radius: 32px;
-    box-sizing: border-box;
-    padding: 1px 6px;
-}
 
-#taxes #round {
-    /* border : 1px solid #ffffff; */
-    position: relative;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    left: -5px;
-    top: 0px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-}
-
-#taxes span {
-    padding-left: 0px;
-}
 
 .home {
     grid-column: span 8;
@@ -933,7 +897,7 @@ main {
 
     .sub-nav2 {
         padding: 0 40px;
-        padding-top: 40px;
+        padding-top: 39px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -944,6 +908,7 @@ main {
     #section-scroll {
         display: flex;
         overflow-x: scroll;
+        position: relative;
     }
     
     .scroll {
@@ -951,6 +916,48 @@ main {
         padding: 0 0;
         position: relative;
 
+    }
+
+    #taxes {
+        border-radius: 12px;
+        border: 1px solid #dddddd;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height:48px;
+        padding: 10px 16px;
+        font-size: 12px;
+        line-height: 16px;
+        box-sizing: border-box;
+        color:rgb(34, 34, 34);
+        margin-left: 16px;
+    }
+    
+    #taxes #button {
+        width: 36px;
+        height: 24px;
+        background-color: #b0b0b0;
+        cursor: pointer;
+        border: 1px solid #b0b0b0;
+        border-radius: 32px;
+        box-sizing: border-box;
+        padding: 1px 6px;
+        margin-left: 8px;
+    }
+    
+    #taxes #round {
+        /* border : 1px solid #ffffff; */
+        position: relative;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        left: -5px;
+        top: 0px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+    #taxes span{
+        white-space: nowrap;
     }
 
     /* .items{
@@ -961,12 +968,12 @@ main {
         justify-content: center;
         align-items: center;
         z-index: 3;
-        height: 60px;
+        height: 100%;
         width: 50px;
         position: absolute;
-        background-color: #ffffff;
-        top: 49px;
-        right: 140px;
+        background:linear-gradient(to right,transparent 0%,white 30%);
+        top: 0px;
+        right: -1px;
     }
 
     #arrow-header-div {
@@ -976,7 +983,6 @@ main {
         background-color: #ffffff;
         border: 0.5px solid rgb(0 0 0/0.3);
         border-radius: 50%;
-        ;
         width: 26px;
         height: 26px;
         display: flex;
@@ -1004,7 +1010,6 @@ main {
         line-height: 1rem;
         font-family: fmed;
         color: #222;
-        margin-top: 2px;
     }
 
     .filters img {
@@ -1023,13 +1028,10 @@ main {
         grid-template-columns: repeat(12, 1fr);
         column-gap: 24px;
         row-gap: 40px;
+        margin-top: 16px;
     }
 
-    #taxes {
-        grid-column: span 12;
-        margin-top: 19px;
-        margin-bottom: -15px;
-    }
+ 
 
 
     .home {
@@ -1450,9 +1452,6 @@ main {
         margin-left: 5px;
     }
 
-    #taxes {
-        grid-column: 2/4;
-    }
     .scroll{
         margin-right: 30px;
     }
